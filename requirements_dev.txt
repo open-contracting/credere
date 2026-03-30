@@ -207,7 +207,7 @@ pydantic-settings==2.1.0
     # via
     #   -r requirements.txt
     #   fastapi
-pygments==2.18.0
+pygments==2.20.0
     # via
     #   -r requirements.txt
     #   pytest
