@@ -125,7 +125,7 @@ pydantic-settings==2.1.0
     # via
     #   -r requirements.in
     #   fastapi
-pygments==2.18.0
+pygments==2.20.0
     # via rich
 pyjwt[crypto]==2.12.1
     # via -r requirements.in
