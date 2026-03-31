@@ -370,7 +370,7 @@ def test_get_applications(client, session, admin_header, lender_header, pending_
     assert_ok(response)
 
     response = client.get("/applications/admin-list/?page=1&page_size=4&sort_field=borrower.legal_name&sort_order=asc")
-    assert response.status_code == status.HTTP_403_FORBIDDEN
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED
     # This error is from a fastapi.security module and therefore isn't translated.
     assert response.json() == {"detail": "Not authenticated"}
 
@@ -381,7 +381,7 @@ def test_get_applications(client, session, admin_header, lender_header, pending_
     assert_ok(response)
 
     response = client.get(f"/applications/id/{appid}")
-    assert response.status_code == status.HTTP_403_FORBIDDEN
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED
     assert response.json() == {"detail": "Not authenticated"}
 
     # tries to get a non existing application
@@ -393,7 +393,7 @@ def test_get_applications(client, session, admin_header, lender_header, pending_
     assert_ok(response)
 
     response = client.get("/applications")
-    assert response.status_code == status.HTTP_403_FORBIDDEN
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED
     assert response.json() == {"detail": "Not authenticated"}
 
     response = client.get(f"/applications/uuid/{pending_application.uuid}")
