@@ -6,7 +6,12 @@ from app.i18n import _
 from app.routers import applications, downloads, guest, lenders, statistics, users
 from app.settings import app_settings
 
-app = FastAPI()
+
+async def http_exception_handler(request: Request, exc: Exception) -> JSONResponse:
+    return JSONResponse({"detail": _("An unexpected error occurred")}, status_code=500)
+
+
+app = FastAPI(exception_handlers={500: http_exception_handler})
 
 app.add_middleware(
     CORSMiddleware,
@@ -24,8 +29,3 @@ app.include_router(guest.meta.router)
 app.include_router(downloads.router)
 app.include_router(lenders.router)
 app.include_router(statistics.router)
-
-
-@app.exception_handler(500)
-async def http_exception_handler(request: Request, exc: Exception) -> JSONResponse:
-    return JSONResponse({"detail": _("An unexpected error occurred")}, status_code=500)
