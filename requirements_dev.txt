@@ -48,6 +48,7 @@ cffi==2.0.0
 charset-normalizer==3.4.6
     # via
     #   -r requirements.txt
+    #   niquests
     #   reportlab
     #   requests
 click==8.3.1
@@ -89,6 +90,7 @@ h11==0.16.0
     # via
     #   -r requirements.txt
     #   httpcore
+    #   urllib3-future
     #   uvicorn
 httpcore==1.0.9
     # via
@@ -113,6 +115,10 @@ iniconfig==2.3.0
     # via pytest
 itsdangerous==2.2.0
     # via -r requirements.txt
+jh2==5.0.10
+    # via
+    #   -r requirements.txt
+    #   urllib3-future
 jinja2==3.1.6
     # via
     #   -r requirements.txt
@@ -156,6 +162,8 @@ mypy-boto3-ses==1.42.3
     # via -r requirements.txt
 mypy-extensions==1.1.0
     # via mypy
+niquests==3.18.3
+    # via -r requirements.txt
 numpy==2.4.4
     # via pandas-stubs
 orjson==3.11.8
@@ -229,6 +237,10 @@ pyyaml==6.0.3
     #   -r requirements.txt
     #   responses
     #   uvicorn
+qh3==1.7.1
+    # via
+    #   -r requirements.txt
+    #   urllib3-future
 reportlab==4.4.10
     # via
     #   -r requirements.txt
@@ -329,6 +341,10 @@ urllib3==2.6.3
     #   responses
     #   sentry-sdk
     #   types-requests
+urllib3-future==2.19.900
+    # via
+    #   -r requirements.txt
+    #   niquests
 uvicorn==0.42.0
     # via
     #   -r requirements.txt
@@ -338,6 +354,10 @@ uvloop==0.22.1
     # via
     #   -r requirements.txt
     #   uvicorn
+wassima==2.0.5
+    # via
+    #   -r requirements.txt
+    #   niquests
 watchfiles==1.1.1
     # via
     #   -r requirements.txt

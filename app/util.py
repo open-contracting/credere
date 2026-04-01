@@ -9,7 +9,7 @@ from datetime import datetime
 from enum import Enum, StrEnum
 from typing import Any, TypeVar
 
-import httpx
+import niquests
 import orjson
 from email_validator import EmailNotValidError, validate_email
 from fastapi import File, HTTPException, UploadFile, status
@@ -50,8 +50,7 @@ class StatisticRange(StrEnum):
     LAST_MONTH = "LAST_MONTH"
 
 
-# In future, httpx.Client might allow custom decoders. https://github.com/encode/httpx/issues/717
-def loads(response: httpx.Response) -> Any:
+def loads(response: niquests.Response) -> Any:
     return orjson.loads(response.text)
 
 
