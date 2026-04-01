@@ -1,7 +1,5 @@
 from typing import Any
 
-import httpx
-
 
 class CredereError(Exception):
     """Base class for exceptions from within this application."""
@@ -18,7 +16,7 @@ class SkippedAwardError(CredereError):
     Use only with :func:`app.db.handle_skipped_award`
     """
 
-    def __init__(self, message: str, url: str | httpx.URL = "", data: Any = None):
+    def __init__(self, message: str, url: str = "", data: Any = None):
         self.category = "SKIPPED_AWARD"
         self.message = message
         self.url = url

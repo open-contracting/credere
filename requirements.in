@@ -4,7 +4,7 @@ boto3
 click
 email-validator
 fastapi[all]
-httpx
+niquests
 minify-html
 mypy-boto3-cognito-idp
 mypy-boto3-ses

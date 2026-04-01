@@ -31,6 +31,7 @@ cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.6
     # via
+    #   niquests
     #   reportlab
     #   requests
 click==8.3.1
@@ -63,6 +64,7 @@ greenlet==3.3.2
 h11==0.16.0
     # via
     #   httpcore
+    #   urllib3-future
     #   uvicorn
 httpcore==1.0.9
     # via httpx
@@ -70,7 +72,6 @@ httptools==0.7.1
     # via uvicorn
 httpx==0.28.1
     # via
-    #   -r requirements.in
     #   fastapi
     #   fastapi-cloud-cli
 idna==3.11
@@ -81,6 +82,8 @@ idna==3.11
     #   requests
 itsdangerous==2.2.0
     # via fastapi
+jh2==5.0.10
+    # via urllib3-future
 jinja2==3.1.6
     # via fastapi
 jmespath==1.1.0
@@ -102,6 +105,8 @@ minify-html==0.18.1
 mypy-boto3-cognito-idp==1.42.59
     # via -r requirements.in
 mypy-boto3-ses==1.42.3
+    # via -r requirements.in
+niquests==3.18.3
     # via -r requirements.in
 orjson==3.11.8
     # via -r requirements.in
@@ -145,6 +150,8 @@ pyyaml==6.0.3
     # via
     #   fastapi
     #   uvicorn
+qh3==1.7.1
+    # via urllib3-future
 reportlab==4.4.10
     # via -r requirements.in
 requests==2.33.1
@@ -210,6 +217,8 @@ urllib3==2.6.3
     #   botocore
     #   requests
     #   sentry-sdk
+urllib3-future==2.19.900
+    # via niquests
 uvicorn==0.42.0
     # via
     #   -r requirements.in
@@ -218,6 +227,8 @@ uvicorn==0.42.0
     #   fastapi-cloud-cli
 uvloop==0.22.1
     # via uvicorn
+wassima==2.0.5
+    # via niquests
 watchfiles==1.1.1
     # via uvicorn
 websockets==16.0
