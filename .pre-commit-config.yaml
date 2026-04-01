@@ -27,7 +27,6 @@ repos:
           - click
           - email-validator
           - fastapi
-          - httpx
           - minify-html
           - mypy-boto3-cognito-idp
           - mypy-boto3-ses

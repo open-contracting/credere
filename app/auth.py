@@ -2,7 +2,7 @@ import functools
 from typing import TYPE_CHECKING, Any
 
 import jwt
-import requests  # moto intercepts only requests, not httpx: https://github.com/getmoto/moto/issues/4197
+import requests
 from fastapi import HTTPException, Request, status
 from fastapi.security import HTTPBearer
 from jwt.utils import base64url_decode
