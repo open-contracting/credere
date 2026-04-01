@@ -9,8 +9,8 @@ from datetime import datetime
 from enum import Enum, StrEnum
 from typing import Any, TypeVar
 
-import niquests
 import orjson
+import requests
 from email_validator import EmailNotValidError, validate_email
 from fastapi import File, HTTPException, UploadFile, status
 from sqlalchemy.orm import Session
@@ -50,7 +50,7 @@ class StatisticRange(StrEnum):
     LAST_MONTH = "LAST_MONTH"
 
 
-def loads(response: niquests.Response) -> Any:
+def loads(response: requests.Response) -> Any:
     return orjson.loads(response.text)
 
 

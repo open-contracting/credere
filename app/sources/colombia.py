@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from typing import Any
 from urllib.parse import quote_plus
 
-import niquests
+import requests
 
 from app import sources, util
 from app.exceptions import SkippedAwardError
@@ -126,7 +126,7 @@ def get_award(
     return new_award
 
 
-def get_new_awards(index: int, from_date: datetime | None, until_date: datetime | None = None) -> niquests.Response:
+def get_new_awards(index: int, from_date: datetime | None, until_date: datetime | None = None) -> requests.Response:
     offset = index * app_settings.secop_pagination_limit
     date_format = "%Y-%m-%dT%H:%M:%S.000"
 
@@ -158,12 +158,12 @@ def get_new_awards(index: int, from_date: datetime | None, until_date: datetime 
     return sources.make_request_with_retry(url, HEADERS)
 
 
-def get_award_by_id_and_supplier(award_id: str, supplier_id: str) -> niquests.Response:
+def get_award_by_id_and_supplier(award_id: str, supplier_id: str) -> requests.Response:
     url = f"{URLS['AWARDS']}?$where=nit_del_proveedor_adjudicado = '{supplier_id}' AND id_adjudicacion = '{award_id}'"
     return sources.make_request_with_retry(url, HEADERS)
 
 
-def get_previous_awards(supplier_id: str) -> niquests.Response:
+def get_previous_awards(supplier_id: str) -> requests.Response:
     """
     Get previous contracts data for the given document provider from the source API.
 
