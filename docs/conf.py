@@ -52,6 +52,7 @@ html_js_files = [
 # "more than one target found for cross-reference 'type'"
 suppress_warnings = ["ref.python"]
 
+autodoc_preserve_defaults = True
 autodoc_default_options = {
     "members": None,
     "member-order": "bysource",
