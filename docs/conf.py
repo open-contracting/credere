@@ -6,7 +6,13 @@
 import sys
 from pathlib import Path
 
+from sqlalchemy.sql.expression import ColumnElement
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# SQLModel with table=True generates __init__ with Column defaults. Sphinx autodoc's stringify_signature() triggers
+# ColumnElement.__bool__(), which raises TypeError("Boolean value of this clause is not defined").
+ColumnElement.__bool__ = lambda _: True  # type: ignore[method-assign,assignment]
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -52,7 +58,6 @@ html_js_files = [
 # "more than one target found for cross-reference 'type'"
 suppress_warnings = ["ref.python"]
 
-autodoc_preserve_defaults = True
 autodoc_default_options = {
     "members": None,
     "member-order": "bysource",
