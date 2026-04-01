@@ -1,6 +1,5 @@
-from urllib3.util.retry import Retry
-
 import niquests
+from urllib3.util.retry import Retry
 
 # The reasons for this configuration were not documented in 427ce63. Assume server and certificate instability.
 client = niquests.Session(retries=Retry(3))
