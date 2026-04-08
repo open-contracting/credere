@@ -39,7 +39,7 @@ click==8.3.1
     #   rich-toolkit
     #   typer
     #   uvicorn
-cryptography==46.0.6
+cryptography==46.0.7
     # via pyjwt
 dnspython==2.8.0
     # via email-validator
@@ -48,11 +48,11 @@ email-validator==2.3.0
     #   -r requirements.in
     #   fastapi
     #   pydantic
-fastapi==0.135.2
+fastapi[all]==0.135.2
     # via
     #   -r requirements.in
     #   sentry-sdk
-fastapi-cli==0.0.24
+fastapi-cli[standard]==0.0.24
     # via fastapi
 fastapi-cloud-cli==0.15.1
     # via fastapi-cli
@@ -110,7 +110,7 @@ psycopg2==2.9.11
     # via sqlalchemy
 pycparser==3.0
     # via cffi
-pydantic==2.12.5
+pydantic[email]==2.12.5
     # via
     #   -r requirements.in
     #   fastapi
@@ -128,7 +128,7 @@ pydantic-settings==2.13.1
     #   fastapi
 pygments==2.20.0
     # via rich
-pyjwt==2.12.1
+pyjwt[crypto]==2.12.1
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via botocore
@@ -161,7 +161,7 @@ rignore==0.7.6
     # via fastapi-cloud-cli
 s3transfer==0.16.0
     # via boto3
-sentry-sdk==2.57.0
+sentry-sdk[fastapi]==2.57.0
     # via
     #   -r requirements.in
     #   fastapi-cloud-cli
@@ -169,7 +169,7 @@ shellingham==1.5.4
     # via typer
 six==1.17.0
     # via python-dateutil
-sqlalchemy==2.0.48
+sqlalchemy[postgresql]==2.0.48
     # via
     #   -r requirements.in
     #   alembic
@@ -209,7 +209,7 @@ urllib3==2.6.3
     #   botocore
     #   requests
     #   sentry-sdk
-uvicorn==0.42.0
+uvicorn[standard]==0.42.0
     # via
     #   -r requirements.in
     #   fastapi
