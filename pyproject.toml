@@ -61,4 +61,5 @@ init_typed = true
 warn_required_dynamic_aliases = true
 
 [tool.uv.pip]
+exclude-newer = "1 week"
 python-platform = "linux"  # greenlet
