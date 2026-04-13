@@ -221,7 +221,7 @@ pygments==2.20.0
     #   rich
 pyjwt[crypto]==2.12.1
     # via -r requirements.txt
-pytest==9.0.2
+pytest==9.0.3
     # via
     #   -r requirements_dev.in
     #   pytest-mock
