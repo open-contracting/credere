@@ -94,7 +94,7 @@ def session(sessionmaker):
 
 
 @pytest.fixture
-def aws_client(mock_aws):
+def aws_client(mock_aws, mock_send_templated_email):
     config = Config(region_name=app_settings.aws_region)
 
     cognito_client = boto3.client("cognito-idp", config=config)
@@ -109,6 +109,7 @@ def aws_client(mock_aws):
     app_settings.cognito_client_secret = "secret"
 
     ses_client = boto3.client("ses", config=config)
+    ses_client.send_templated_email = mock_send_templated_email
     ses_client.verify_email_identity(EmailAddress=app_settings.email_sender_address)
     for key in ("-es", "-en"):
         ses_client.create_template(
