@@ -46,7 +46,6 @@ def aws_credentials():
     os.environ["AWS_DEFAULT_REGION"] = "us-east-1"
 
 
-# Setting "session" scope causes test failures, because users, etc. that are not expected to exist do exist.
 @pytest.fixture(autouse=True)
 def mock_aws(aws_credentials):
     # http://docs.getmoto.org/en/latest/docs/services/cognito-idp.html
@@ -55,8 +54,6 @@ def mock_aws(aws_credentials):
 
 
 # IMPORTANT! All calls to aws.ses_client must be mocked.
-#
-# Setting "session" scope and calling `mock_send_templated_email.reset_mock()` at the start of tests saves little time.
 @pytest.fixture(autouse=True)
 def mock_send_templated_email(mock_aws):
     with patch.object(aws.ses_client, "send_templated_email", MagicMock()) as mock:
