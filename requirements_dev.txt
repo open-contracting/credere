@@ -240,7 +240,7 @@ python-dotenv==1.2.2
     #   -r requirements.txt
     #   pydantic-settings
     #   uvicorn
-python-multipart==0.0.22
+python-multipart==0.0.26
     # via
     #   -r requirements.txt
     #   fastapi
