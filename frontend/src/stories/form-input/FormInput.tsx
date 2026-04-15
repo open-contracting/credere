@@ -13,6 +13,7 @@ import { getProperty } from "../../util";
 import { Text } from "../text/Text";
 
 export const Input = styled(_Input, {
+  // Can remove in material-ui >9.0.0.
   shouldForwardProp: (prop) => prop !== "notched",
 })`
   background-color: white;
