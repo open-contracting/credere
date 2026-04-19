@@ -1,5 +1,5 @@
-Credere backend
-===============
+Credere
+=======
 
 .. include:: ../README.rst
 
