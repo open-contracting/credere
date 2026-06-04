@@ -176,7 +176,7 @@ sqlalchemy[postgresql]==2.0.48
     #   sqlmodel
 sqlmodel==0.0.37
     # via -r requirements.in
-starlette==1.0.0
+starlette==1.0.1
     # via
     #   -r requirements.in
     #   fastapi
