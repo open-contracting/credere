@@ -26,6 +26,7 @@ from app.sources import colombia as data_access
 if TYPE_CHECKING:
     from fastapi.routing import APIRoute
     from starlette.routing import Route
+    from typer._click.core import Context as TyperContext
 
 state = {"quiet": False}
 
@@ -33,7 +34,7 @@ state = {"quiet": False}
 class OrderedGroup(typer.cli.TyperCLIGroup):
     # https://github.com/fastapi/typer/blob/adca3254f8c2adc8d9b71b5cdea65c41770bd9b9/typer/cli.py#L55-L57
     # https://github.com/pallets/click/blob/e16088a8569597c55f108ea89af6245898249ec2/src/click/core.py#L1684-L1686
-    def list_commands(self, ctx: click.Context) -> list[str]:
+    def list_commands(self, ctx: "TyperContext") -> list[str]:
         self.maybe_add_run(ctx)
         return list(self.commands)
 
