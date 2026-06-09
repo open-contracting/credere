@@ -3,7 +3,7 @@ import os
 import uuid
 from collections.abc import Generator
 from contextlib import contextmanager
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any
 from unittest.mock import MagicMock, patch
 
@@ -331,7 +331,7 @@ def borrower(session):
         },
         status=models.BorrowerStatus.ACTIVE,
         # Timestamps
-        created_at=datetime.utcnow(),
+        created_at=datetime.now(UTC),
         updated_at="2023-06-22T17:48:05.381251",
     )
     session.commit()
@@ -382,7 +382,7 @@ def application_payload(application_uuid, award, borrower):
         "award_id": award.id,
         "borrower": borrower,
         # Timestamps
-        "created_at": datetime.utcnow(),
+        "created_at": datetime.now(UTC),
         "updated_at": "2023-06-26T03:14:31.572553+00:00",
     }
 
@@ -433,7 +433,7 @@ def submitted_application_external_onboarding(
         status=models.ApplicationStatus.SUBMITTED,
         credit_product_id=credit_product_external_onboarding.id,
         lender_id=lender_external_onboarding.id,
-        borrower_submitted_at=datetime.utcnow(),
+        borrower_submitted_at=datetime.now(UTC),
     )
     session.commit()
     return instance
