@@ -128,7 +128,7 @@ pydantic-settings==2.13.1
     #   fastapi
 pygments==2.20.0
     # via rich
-pyjwt[crypto]==2.12.1
+pyjwt[crypto]==2.13.0
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via botocore

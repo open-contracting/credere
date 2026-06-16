@@ -219,7 +219,7 @@ pygments==2.20.0
     #   -r requirements.txt
     #   pytest
     #   rich
-pyjwt[crypto]==2.12.1
+pyjwt[crypto]==2.13.0
     # via -r requirements.txt
 pytest==9.0.3
     # via
