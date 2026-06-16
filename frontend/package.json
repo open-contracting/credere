@@ -32,18 +32,18 @@
   "devDependencies": {
     "@storybook/addon-docs": "10.1.9",
     "@storybook/addon-links": "10.1.9",
-    "@storybook/react-vite": "10.1.9",
-    "@tailwindcss/vite": "^4.1.18",
+    "@storybook/react-vite": "10.4.6",
+    "@tailwindcss/vite": "^4.3.1",
     "@types/lodash": "^4.14.194",
     "@types/node": "^25.0.3",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react-swc": "^4.2.2",
+    "@vitejs/plugin-react-swc": "^4.3.1",
     "prop-types": "^15.8.1",
     "storybook": "10.2.13",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.0.2",
-    "vite": "^7.3.0",
+    "vite": "^8.0.16",
     "vite-plugin-checker": "^0.12.0",
     "vite-tsconfig-paths": "^6.0.1"
   }
