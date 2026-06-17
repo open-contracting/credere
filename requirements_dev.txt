@@ -15,6 +15,7 @@ anyio==4.13.0
     # via
     #   -r requirements.txt
     #   httpx
+    #   httpx2
     #   starlette
     #   watchfiles
 babel==2.18.0
@@ -63,7 +64,6 @@ cryptography==48.0.1
     #   -r requirements.txt
     #   joserfc
     #   moto
-    #   pyjwt
 dnspython==2.8.0
     # via
     #   -r requirements.txt
@@ -71,20 +71,13 @@ dnspython==2.8.0
 email-validator==2.3.0
     # via
     #   -r requirements.txt
-    #   fastapi
     #   pydantic
-fastapi[all]==0.135.2
-    # via
-    #   -r requirements.txt
-    #   sentry-sdk
-fastapi-cli[standard]==0.0.24
-    # via
-    #   -r requirements.txt
-    #   fastapi
+fastapi==0.135.2
+    # via -r requirements.txt
+fastapi-cli==0.0.24
+    # via -r requirements.txt
 fastapi-cloud-cli==0.15.1
-    # via
-    #   -r requirements.txt
-    #   fastapi-cli
+    # via -r requirements.txt
 fastar==0.9.0
     # via
     #   -r requirements.txt
@@ -97,11 +90,14 @@ h11==0.16.0
     # via
     #   -r requirements.txt
     #   httpcore
+    #   httpcore2
     #   uvicorn
 httpcore==1.0.9
     # via
     #   -r requirements.txt
     #   httpx
+httpcore2==2.3.0
+    # via httpx2
 httptools==0.7.1
     # via
     #   -r requirements.txt
@@ -109,26 +105,29 @@ httptools==0.7.1
 httpx==0.28.1
     # via
     #   -r requirements.txt
-    #   fastapi
     #   fastapi-cloud-cli
+    #   starlette
+httpx2==2.3.0
+    # via starlette
 idna==3.15
     # via
     #   -r requirements.txt
     #   anyio
     #   email-validator
     #   httpx
+    #   httpx2
     #   requests
 iniconfig==2.3.0
     # via pytest
 itsdangerous==2.2.0
     # via
     #   -r requirements.txt
-    #   fastapi
+    #   starlette
 jinja2==3.1.6
     # via
     #   -r requirements.txt
-    #   fastapi
     #   moto
+    #   starlette
 jmespath==1.1.0
     # via
     #   -r requirements.txt
@@ -158,7 +157,7 @@ mdurl==0.1.2
     #   markdown-it-py
 minify-html==0.18.1
     # via -r requirements.txt
-moto[cognitoidp]==5.1.22
+moto==5.1.22
     # via -r requirements_dev.in
 mypy==1.20.0
     # via -r requirements_dev.in
@@ -185,16 +184,14 @@ pillow==12.2.0
 pluggy==1.6.0
     # via pytest
 psycopg2==2.9.11
-    # via
-    #   -r requirements.txt
-    #   sqlalchemy
+    # via -r requirements.txt
 py-html-checker==0.5.0
     # via -r requirements_dev.in
 pycparser==3.0
     # via
     #   -r requirements.txt
     #   cffi
-pydantic[email]==2.12.5
+pydantic==2.12.5
     # via
     #   -r requirements.txt
     #   fastapi
@@ -207,19 +204,15 @@ pydantic-core==2.41.5
     #   -r requirements.txt
     #   pydantic
 pydantic-extra-types==2.11.1
-    # via
-    #   -r requirements.txt
-    #   fastapi
+    # via -r requirements.txt
 pydantic-settings==2.13.1
-    # via
-    #   -r requirements.txt
-    #   fastapi
+    # via -r requirements.txt
 pygments==2.20.0
     # via
     #   -r requirements.txt
     #   pytest
     #   rich
-pyjwt[crypto]==2.13.0
+pyjwt==2.13.0
     # via -r requirements.txt
 pytest==9.0.3
     # via
@@ -243,12 +236,12 @@ python-dotenv==1.2.2
 python-multipart==0.0.31
     # via
     #   -r requirements.txt
-    #   fastapi
+    #   starlette
 pyyaml==6.0.3
     # via
     #   -r requirements.txt
-    #   fastapi
     #   responses
+    #   starlette
     #   uvicorn
 reportlab==4.4.10
     # via
@@ -282,7 +275,7 @@ s3transfer==0.16.0
     # via
     #   -r requirements.txt
     #   boto3
-sentry-sdk[fastapi]==2.57.0
+sentry-sdk==2.57.0
     # via
     #   -r requirements.txt
     #   fastapi-cloud-cli
@@ -294,7 +287,7 @@ six==1.17.0
     # via
     #   -r requirements.txt
     #   python-dateutil
-sqlalchemy[postgresql]==2.0.48
+sqlalchemy==2.0.48
     # via
     #   -r requirements.txt
     #   alembic
@@ -303,10 +296,15 @@ sqlalchemy2-stubs==0.0.2a38
     # via -r requirements_dev.in
 sqlmodel==0.0.37
     # via -r requirements.txt
-starlette==1.0.1
+starlette==1.3.1
     # via
     #   -r requirements.txt
+    #   -r requirements_dev.in
     #   fastapi
+truststore==0.10.4
+    # via
+    #   httpcore2
+    #   httpx2
 typer==0.24.1
     # via
     #   -r requirements.txt
@@ -350,10 +348,9 @@ urllib3==2.7.0
     #   responses
     #   sentry-sdk
     #   types-requests
-uvicorn[standard]==0.42.0
+uvicorn==0.42.0
     # via
     #   -r requirements.txt
-    #   fastapi
     #   fastapi-cli
     #   fastapi-cloud-cli
 uvloop==0.22.1

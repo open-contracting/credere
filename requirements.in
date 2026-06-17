@@ -20,4 +20,5 @@ sqlalchemy[postgresql]
 sqlmodel
 starlette
 typer
+urllib3
 uvicorn

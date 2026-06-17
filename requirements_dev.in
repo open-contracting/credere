@@ -11,4 +11,5 @@ pytest-mock
 pytest-random-order
 reportlab-stubs
 sqlalchemy2-stubs
+starlette[full]
 types-requests
