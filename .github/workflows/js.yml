@@ -5,3 +5,5 @@ jobs:
     uses: open-contracting/.github/.github/workflows/js.yml@main
     permissions:
       contents: read
+    with:
+      lockfile_path: frontend/pnpm-lock.yaml
