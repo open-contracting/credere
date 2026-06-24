@@ -1,6 +1,5 @@
 import axios, { type AxiosError, type AxiosRequestConfig } from "axios";
 
-import type { ILoginResponse } from "../schemas/auth";
 import { getAccessToken, removeUser, saveAccessToken } from "./localstore";
 
 interface RetryConfig extends AxiosRequestConfig {
@@ -29,11 +28,6 @@ export const setHeaderFromLocalStorage = () => {
 setHeaderFromLocalStorage(); // set header token from local storage on first load
 
 export const authApi = axios.create(globalConfig);
-
-export const refreshAccessTokenFn = async () => {
-  const response = await authApi.get<ILoginResponse>("users/refresh");
-  return response.data;
-};
 
 export const resetAuthApi = () => {
   if (globalConfig.headers) {
