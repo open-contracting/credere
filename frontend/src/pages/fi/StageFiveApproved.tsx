@@ -11,7 +11,7 @@ import Title from "src/stories/title/Title";
 import useDownloadApplication from "../../hooks/useDownloadApplication";
 import useLangContext from "../../hooks/useLangContext";
 
-export function StageFiveApproved() {
+function StageFiveApproved() {
   const { t } = useT();
   const navigate = useNavigate();
   const applicationContext = useApplicationContext();

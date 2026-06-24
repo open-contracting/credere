@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function ScrollToTop() {
+function ScrollToTop() {
   useEffect(() => {
     // "document.documentElement.scrollTo" is the magic for React Router Dom v6
     document.documentElement.scrollTo({

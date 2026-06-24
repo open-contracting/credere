@@ -69,7 +69,7 @@ const LabeledSwitch = styled(MUISwitch)(() => ({
   },
 }));
 
-export type ControlledSwitchProps = {
+type ControlledSwitchProps = {
   name: string;
   label: string;
   disabled?: boolean;
@@ -143,7 +143,7 @@ export function Switch({
   );
 }
 
-export function ControlledSwitch({
+function ControlledSwitch({
   name,
   label,
   disabled = undefined,

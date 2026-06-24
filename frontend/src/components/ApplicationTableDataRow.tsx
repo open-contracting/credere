@@ -7,7 +7,7 @@ import type {
   IUpdateBorrower,
 } from "../schemas/application";
 
-export interface ApplicationTableDataRowProps {
+interface ApplicationTableDataRowProps {
   label: string;
   formLabel?: string;
   missingData: { [key: string]: boolean };

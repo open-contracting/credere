@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useTranslation as useT } from "react-i18next";
 import useApplicationContext from "src/hooks/useApplicationContext";
-import { Button } from "src/stories/button/Button";
+import Button from "src/stories/button/Button";
 import Text from "src/stories/text/Text";
 import Title from "src/stories/title/Title";
 

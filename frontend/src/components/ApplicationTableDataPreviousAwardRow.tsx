@@ -12,7 +12,7 @@ import type { ApplicationTableAwardDataRowProps } from "./ApplicationTableDataRo
 import DataAvailability from "./DataAvailability";
 import { DataTableCell, DataTableHeadCell, DataTableHeadLabel } from "./DataTable";
 
-export type ApplicationTableDataPreviousAwardRowProps = Omit<
+type ApplicationTableDataPreviousAwardRowProps = Omit<
   ApplicationTableAwardDataRowProps,
   "name" | "missingData" | "award" | "readonly" | "formLabel"
 > & {
@@ -29,7 +29,7 @@ const getIcon = (open: boolean) => {
   return <img className="self-end" src={icon} alt={`icon-${open ? "minus" : "plus"}`} />;
 };
 
-export function ApplicationTableDataPreviousAwardRow({
+function ApplicationTableDataPreviousAwardRow({
   label,
   isLoading,
   previousAwards = undefined,

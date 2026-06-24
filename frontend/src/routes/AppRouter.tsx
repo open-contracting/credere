@@ -394,5 +394,3 @@ export function AppRouter() {
     </MuiTheme>
   );
 }
-
-export default AppRouter;

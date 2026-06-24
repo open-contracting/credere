@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
 import { useTranslation as useT } from "react-i18next";
-import { Button } from "src/stories/button/Button";
+import Button from "src/stories/button/Button";
 
 import { getLendersFn } from "../api/private";
 import { QUERY_KEYS } from "../constants";
@@ -13,7 +13,7 @@ interface LendersButtonGroupProps {
   onLenderSelected: (lenderId: number | null) => void;
 }
 
-export function LendersButtonGroup({ onLenderSelected }: LendersButtonGroupProps) {
+function LendersButtonGroup({ onLenderSelected }: LendersButtonGroupProps) {
   const { t } = useT();
   // Get the lenders from the API
   const { data } = useQuery({

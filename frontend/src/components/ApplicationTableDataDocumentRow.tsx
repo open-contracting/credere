@@ -8,7 +8,7 @@ import DataAvailability from "./DataAvailability";
 import { DataTableCell } from "./DataTable";
 import DataVerificationForm from "./DataVerificationForm";
 
-export function ApplicationTableDataDocumentRow({
+function ApplicationTableDataDocumentRow({
   document,
   formatter = undefined,
   preWhitespace = false,

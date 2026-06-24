@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import { twMerge } from "tailwind-merge";
 
-export type DashboardColor = "default" | "red";
+type DashboardColor = "default" | "red";
 
 type DashboardChartContainerProps = {
   className?: string;
@@ -11,7 +11,7 @@ type DashboardChartContainerProps = {
   children: React.ReactNode;
 };
 
-export function DashboardChartContainer({
+function DashboardChartContainer({
   className = "",
   boxClassName = "",
   label,

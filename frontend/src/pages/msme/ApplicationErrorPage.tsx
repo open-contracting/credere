@@ -2,11 +2,11 @@ import { useTranslation as useT } from "react-i18next";
 import Text from "src/stories/text/Text";
 import Title from "src/stories/title/Title";
 
-export type ApplicationErrorPageProps = {
+type ApplicationErrorPageProps = {
   message: string;
 };
 
-export function ApplicationErrorPage({ message }: ApplicationErrorPageProps) {
+function ApplicationErrorPage({ message }: ApplicationErrorPageProps) {
   const { t } = useT();
 
   return (

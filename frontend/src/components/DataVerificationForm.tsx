@@ -12,7 +12,7 @@ interface DataVerificationFormProps {
   isLoading: boolean;
 }
 
-export function DataVerificationForm({
+function DataVerificationForm({
   name,
   value,
   isLoading,

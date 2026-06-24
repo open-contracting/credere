@@ -8,11 +8,11 @@ import { DataTable, type HeadCell } from "./DataTable";
 
 const CreditProductDataTable = DataTable<ICreditProduct>;
 
-export interface CreditProductListProps {
+interface CreditProductListProps {
   rows: ICreditProduct[];
 }
 
-export function CreditProductList({ rows }: CreditProductListProps) {
+function CreditProductList({ rows }: CreditProductListProps) {
   const { t } = useT();
 
   const headCells: HeadCell<ICreditProduct>[] = useMemo(

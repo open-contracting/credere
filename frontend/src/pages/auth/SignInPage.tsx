@@ -5,12 +5,12 @@ import { useTranslation as useT } from "react-i18next";
 import { Link } from "react-router";
 import useSignIn from "src/hooks/useSignIn";
 import { type LoginInput, loginSchema } from "src/schemas/auth";
-import { Button } from "src/stories/button/Button";
+import Button from "src/stories/button/Button";
 import FormInput from "src/stories/form-input/FormInput";
 import Text from "src/stories/text/Text";
 import Title from "src/stories/title/Title";
 
-export function SignInPage() {
+function SignInPage() {
   const { t } = useT();
   const { signInMutation, isLoading } = useSignIn();
 

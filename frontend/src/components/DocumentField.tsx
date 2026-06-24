@@ -24,7 +24,7 @@ interface DocumentFieldProps {
   >;
 }
 
-export function DocumentField({
+function DocumentField({
   label,
   documentType,
   secure = false,

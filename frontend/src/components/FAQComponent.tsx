@@ -11,7 +11,7 @@ interface FAQComponentProps {
   className?: string;
 }
 
-export function FAQComponent({ className = "" }: FAQComponentProps) {
+function FAQComponent({ className = "" }: FAQComponentProps) {
   const { t } = useT();
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const handleToggle = (key: string) => {

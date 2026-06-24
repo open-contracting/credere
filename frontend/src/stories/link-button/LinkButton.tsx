@@ -5,7 +5,7 @@ import ArrowInCircleIcon from "../../assets/icons/arrow-in-circle.svg";
 
 type SizeType = "large" | "small";
 
-export interface LinkButtonProps {
+interface LinkButtonProps {
   label: string;
   size?: SizeType;
   noIcon?: boolean;
@@ -15,7 +15,7 @@ export interface LinkButtonProps {
   onClick?: () => void;
 }
 
-export function LinkButton<C extends React.ElementType>({
+function LinkButton<C extends React.ElementType>({
   size = "large",
   label,
   noIcon = false,

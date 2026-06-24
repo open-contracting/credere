@@ -12,7 +12,7 @@ import Title from "src/stories/title/Title";
 import ApplicationAwardTable from "../../components/ApplicationAwardTable";
 import useLangContext from "../../hooks/useLangContext";
 
-export function StageThree() {
+function StageThree() {
   const { t } = useT();
   const navigate = useNavigate();
   const applicationContext = useApplicationContext();

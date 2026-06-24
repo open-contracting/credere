@@ -6,7 +6,7 @@ import DataAvailability from "./DataAvailability";
 import DataAvailabilityForm from "./DataAvailabilityForm";
 import { DataTableCell } from "./DataTable";
 
-export function ApplicationTableDataAwardRow({
+function ApplicationTableDataAwardRow({
   label,
   name,
   award,

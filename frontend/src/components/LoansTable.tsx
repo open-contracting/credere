@@ -8,7 +8,7 @@ import Button from "../stories/button/Button";
 import { formatCurrency } from "../util";
 import { DataTableCell, DataTableHeadCell, DataTableHeadLabel, TransparentDataTableCell } from "./DataTable";
 
-export interface LoansTableProps {
+interface LoansTableProps {
   rows: ICreditProduct[];
   amountRequested: number;
   currency: string;
@@ -16,7 +16,7 @@ export interface LoansTableProps {
   selectOption: (value: ICreditProduct) => void;
 }
 
-export function LoansTable({ rows, amountRequested, currency, isLoading = false, selectOption }: LoansTableProps) {
+function LoansTable({ rows, amountRequested, currency, isLoading = false, selectOption }: LoansTableProps) {
   const { t } = useT();
 
   if (!rows.length && !isLoading) {

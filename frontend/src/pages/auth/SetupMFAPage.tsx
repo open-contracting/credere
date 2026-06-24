@@ -6,13 +6,13 @@ import QRCode from "react-qr-code";
 import { useParamsTypeSafe, useSearchParamsTypeSafe } from "src/hooks/useParamsTypeSafe";
 import useSetupMFA from "src/hooks/useSetupMFA";
 import { type SetupMFAInputForm, setupMFASchema } from "src/schemas/auth";
-import { Button } from "src/stories/button/Button";
+import Button from "src/stories/button/Button";
 import FormInput from "src/stories/form-input/FormInput";
 import Text from "src/stories/text/Text";
 import Title from "src/stories/title/Title";
 import { z } from "zod";
 
-export function SetupMFAPage() {
+function SetupMFAPage() {
   const { t } = useT();
   const { setupMFAMutation, isLoading } = useSetupMFA();
 

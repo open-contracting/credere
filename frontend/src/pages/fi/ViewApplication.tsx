@@ -13,7 +13,7 @@ import DataDisplay from "../../components/DataDisplay";
 import { APPLICATION_STATUS } from "../../constants";
 import { RenderStatusString } from "../../util";
 
-export function ViewApplication() {
+function ViewApplication() {
   const { t } = useT();
   const navigate = useNavigate();
   const applicationContext = useApplicationContext();

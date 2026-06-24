@@ -3,7 +3,7 @@ export type ChartData = {
   value: number;
 };
 
-export interface StatisticsKpis {
+interface StatisticsKpis {
   applications_received_count: number;
   applications_approved_count: number;
   applications_rejected_count: number;
@@ -18,7 +18,7 @@ export interface StatisticsKpis {
   proportion_of_submitted_out_of_opt_in: number;
 }
 
-export interface OptInStat {
+interface OptInStat {
   unique_businesses_contacted_by_credere: number;
   unique_smes_contacted_by_credere: number;
   applications_created: number;

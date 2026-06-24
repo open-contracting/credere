@@ -2,12 +2,12 @@ import { Typography } from "@mui/material";
 import type { PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
-export type TextProps = {
+type TextProps = {
   className?: string;
   fontVariant?: boolean;
 };
 
-export function Text({ children, fontVariant = false, className = "" }: TextProps & PropsWithChildren) {
+function Text({ children, fontVariant = false, className = "" }: TextProps & PropsWithChildren) {
   return (
     <Typography
       variant="body1"

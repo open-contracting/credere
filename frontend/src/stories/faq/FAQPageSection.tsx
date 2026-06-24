@@ -4,16 +4,16 @@ import { twMerge } from "tailwind-merge";
 
 import Minus from "../../assets/icons/minus.svg";
 import Plus from "../../assets/icons/plus.svg";
-import { Text } from "../text/Text";
+import Text from "../text/Text";
 
-export type FAQPageSectionProps = {
+type FAQPageSectionProps = {
   title: string;
   className?: string;
   open: boolean;
   handleToggle: () => void;
 };
 
-export function FAQPageSection({
+function FAQPageSection({
   title,
   className = "",
   open,

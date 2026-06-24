@@ -12,7 +12,7 @@ import ApplicationBorrowerTable from "../../components/ApplicationBorrowerTable"
 import useLangContext from "../../hooks/useLangContext";
 import LinkButton from "../../stories/link-button/LinkButton";
 
-export function StageOne() {
+function StageOne() {
   const { t } = useT();
   const navigate = useNavigate();
   const applicationContext = useApplicationContext();

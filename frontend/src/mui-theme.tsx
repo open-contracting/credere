@@ -93,7 +93,7 @@ interface Props {
   children: ReactNode;
 }
 
-export function MuiTheme({ children }: Props) {
+function MuiTheme({ children }: Props) {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>

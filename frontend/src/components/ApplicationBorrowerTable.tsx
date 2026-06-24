@@ -8,14 +8,14 @@ import { formatCurrency, RenderSector, RenderSize } from "../util";
 import ApplicationTableDataBorrowerRow from "./ApplicationTableDataBorrowerRow";
 import { DataTableHeadCell, DataTableHeadLabel } from "./DataTable";
 
-export interface ApplicationBorrowerTableProps {
+interface ApplicationBorrowerTableProps {
   application: IApplication;
   readonly?: boolean;
   allowDataVerification?: boolean;
   className?: string;
 }
 
-export function ApplicationBorrowerTable({
+function ApplicationBorrowerTable({
   application,
   readonly = false,
   allowDataVerification = false,

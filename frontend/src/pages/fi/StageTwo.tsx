@@ -20,7 +20,7 @@ import { type FormEmailInput, formEmailSchema } from "../../schemas/application"
 import FormInput from "../../stories/form-input/FormInput";
 import LinkButton from "../../stories/link-button/LinkButton";
 
-export function StageTwo() {
+function StageTwo() {
   const { t } = useT();
   const [openEmailDialog, setOpenEmailDialog] = useState<boolean>(false);
   const navigate = useNavigate();

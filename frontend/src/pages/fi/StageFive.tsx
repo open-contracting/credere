@@ -23,7 +23,7 @@ import { type ApproveApplicationInput, approveSchema, type FormApprovedInput } f
 import LapseApplicationDialog from "./LapseApplicationDialog";
 import RejectApplicationDialog from "./RejectApplicationDialog";
 
-export function StageFive() {
+function StageFive() {
   const { t } = useT();
   const navigate = useNavigate();
   const applicationContext = useApplicationContext();

@@ -3,7 +3,7 @@ import { type PropsWithChildren, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 import ArrowGreen from "../../assets/icons/arrow-green.svg";
-import { Text } from "../text/Text";
+import Text from "../text/Text";
 
 export type FAQSectionProps = {
   title: string;
@@ -45,5 +45,3 @@ export function FAQSection({ title, className = "", children }: FAQSectionProps 
     </Box>
   );
 }
-
-export default FAQSection;

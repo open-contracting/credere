@@ -7,7 +7,7 @@ import Title from "src/stories/title/Title";
 import ApplicationsList from "../../components/ApplicationsList";
 import { USER_TYPES } from "../../constants";
 
-export function Applications() {
+function Applications() {
   const { t } = useT();
 
   return (

@@ -25,7 +25,7 @@ const formCellSchema = z.object({
 
 type FormCellInput = TypeOf<typeof formCellSchema>;
 
-export function DataAvailabilityForm({
+function DataAvailabilityForm({
   name,
   value,
   isLoading,

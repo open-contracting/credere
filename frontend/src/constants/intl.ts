@@ -3,7 +3,7 @@ interface CurrencyFormatOptions {
   options: Intl.NumberFormatOptions;
 }
 
-export const CURRENCY_FORMAT_OPTIONS: { [key: string]: CurrencyFormatOptions } = {
+const CURRENCY_FORMAT_OPTIONS: { [key: string]: CurrencyFormatOptions } = {
   COP: {
     locale: "es-CO", // 'en-US
     options: {

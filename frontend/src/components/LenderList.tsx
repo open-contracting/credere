@@ -13,7 +13,7 @@ import { DataTable, type HeadCell } from "./DataTable";
 
 const LenderDataTable = DataTable<ILender>;
 
-export function LenderList() {
+function LenderList() {
   const { enqueueSnackbar } = useSnackbar();
   const { t } = useT();
 

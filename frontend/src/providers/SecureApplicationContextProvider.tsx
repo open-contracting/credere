@@ -38,7 +38,7 @@ const applicationReducer = (state: ApplicationState, action: Action) => {
   }
 };
 
-export function ApplicationContextProvider({ children }: ApplicationContextProviderProps) {
+function ApplicationContextProvider({ children }: ApplicationContextProviderProps) {
   const [state, dispatch] = React.useReducer(applicationReducer, initialState);
 
   const value = React.useMemo(

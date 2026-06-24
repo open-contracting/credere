@@ -9,7 +9,7 @@ import Title from "src/stories/title/Title";
 
 import useLangContext from "../../hooks/useLangContext";
 
-export function StageFiveLapsed() {
+function StageFiveLapsed() {
   const { t } = useT();
   const navigate = useNavigate();
   const applicationContext = useApplicationContext();

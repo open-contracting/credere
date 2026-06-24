@@ -8,7 +8,7 @@ import FAQComponent from "src/components/FAQComponent";
 import useAccessScheme from "src/hooks/useAccessScheme";
 import useApplicationContext from "src/hooks/useApplicationContext";
 import { type IntroInput, introSchema } from "src/schemas/application";
-import { Button } from "src/stories/button/Button";
+import Button from "src/stories/button/Button";
 import Checkbox from "src/stories/checkbox/Checkbox";
 import Text from "src/stories/text/Text";
 import Title from "src/stories/title/Title";

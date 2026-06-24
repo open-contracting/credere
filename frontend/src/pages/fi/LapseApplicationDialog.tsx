@@ -5,12 +5,12 @@ import useApplicationContext from "src/hooks/useSecureApplicationContext";
 import Button from "src/stories/button/Button";
 import Title from "src/stories/title/Title";
 
-export interface LapseApplicationDialogProps {
+interface LapseApplicationDialogProps {
   open: boolean;
   handleClose: () => void;
 }
 
-export function LapseApplicationDialog({ open, handleClose }: LapseApplicationDialogProps) {
+function LapseApplicationDialog({ open, handleClose }: LapseApplicationDialogProps) {
   const { t } = useT();
   const applicationContext = useApplicationContext();
   const application = applicationContext.state.data;
