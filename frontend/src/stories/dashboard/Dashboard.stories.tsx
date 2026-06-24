@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { DashboardItemContainer } from "./DashboardItemContainer";
+import DashboardItemContainer from "./DashboardItemContainer";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {

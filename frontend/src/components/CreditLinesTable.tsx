@@ -8,14 +8,14 @@ import Button from "../stories/button/Button";
 import { formatCurrency } from "../util";
 import { DataTableCell, DataTableHeadCell, DataTableHeadLabel, TransparentDataTableCell } from "./DataTable";
 
-export interface CreditLinesTableProps {
+interface CreditLinesTableProps {
   rows: ICreditProduct[];
   currency: string;
   isLoading?: boolean;
   selectOption: (value: ICreditProduct) => void;
 }
 
-export function CreditLinesTable({ rows, currency, isLoading = false, selectOption }: CreditLinesTableProps) {
+function CreditLinesTable({ rows, currency, isLoading = false, selectOption }: CreditLinesTableProps) {
   const { t } = useT();
 
   if (!rows.length && !isLoading) {

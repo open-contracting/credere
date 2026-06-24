@@ -63,7 +63,7 @@ function stableSort<T>(array: readonly T[], comparator: (a: T, b: T) => number) 
   return stabilizedThis.map((el) => el[0]);
 }
 
-export type DataCellType = "date" | "currency" | "label" | undefined;
+type DataCellType = "date" | "currency" | "label" | undefined;
 
 export interface HeadCell<T> {
   disablePadding: boolean;
@@ -176,7 +176,7 @@ function DataTableHead<T>({
   );
 }
 
-export interface HandlePagination {
+interface HandlePagination {
   totalCount: number;
   handleChangePage: (newPage: number, rowsPerPage: number) => void;
 }
@@ -344,5 +344,3 @@ export function DataTable<T>({
     </Box>
   );
 }
-
-export default DataTable;

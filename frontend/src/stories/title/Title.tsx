@@ -1,14 +1,14 @@
 import { Typography } from "@mui/material";
 import { twMerge } from "tailwind-merge";
 
-export type TitleProps = {
+type TitleProps = {
   label?: string;
   type?: "page" | "section" | "subsection";
   className?: string;
 };
 
 type VariantType = "h1" | "h2" | "h3";
-export function Title({ label = "", type = "section", className = "" }: TitleProps) {
+function Title({ label = "", type = "section", className = "" }: TitleProps) {
   let variant: VariantType = "h2";
   let fontSizeClass = "text-2xl font-medium";
   if (type === "page") {

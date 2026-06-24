@@ -7,7 +7,7 @@ type FAQContainerProps = {
   boxClassName?: string;
   title?: string;
 };
-export function FAQContainer({
+function FAQContainer({
   className = "",
   title = "Frequently Asked Questions",
   boxClassName = "",

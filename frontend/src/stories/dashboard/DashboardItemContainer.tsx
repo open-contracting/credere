@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import { twMerge } from "tailwind-merge";
 
-export type DashboardColor = "default" | "red";
+type DashboardColor = "default" | "red";
 
 type DashboardItemContainerProps = {
   className?: string;
@@ -13,7 +13,7 @@ type DashboardItemContainerProps = {
   color?: DashboardColor;
 };
 
-export function DashboardItemContainer({
+function DashboardItemContainer({
   className = "",
   valueClassName = "",
   boxClassName = "",

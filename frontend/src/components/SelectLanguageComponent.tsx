@@ -8,7 +8,7 @@ import useLangContext from "../hooks/useLangContext";
 import type { FormSelectOption } from "../stories/form-select/FormSelect";
 import { t as tNative } from "../util/i18n";
 
-export const InputSelectSmall = styled(_Input)`
+const InputSelectSmall = styled(_Input)`
   background-color: white;
   padding: 6px 9px;
   font-size: 14px;

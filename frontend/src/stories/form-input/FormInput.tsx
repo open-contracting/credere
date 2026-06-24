@@ -10,7 +10,7 @@ import { NumericFormat, type NumericFormatProps } from "react-number-format";
 import EmailIcon from "../../assets/icons/email.svg";
 import KeyIcon from "../../assets/icons/key.svg";
 import { getProperty } from "../../util";
-import { Text } from "../text/Text";
+import Text from "../text/Text";
 
 export const Input = styled(_Input, {
   // Can remove in material-ui >9.0.0.
@@ -28,7 +28,7 @@ export const Input = styled(_Input, {
   }
 `;
 
-export const InputFormCell = styled(_Input)`
+const InputFormCell = styled(_Input)`
   background-color: white;
   padding: 6px 9px;
   font-size: 14px;
@@ -47,7 +47,7 @@ export const InputFormCell = styled(_Input)`
   }
 `;
 
-export const DateField = styled(MUIDateField)`
+const DateField = styled(MUIDateField)`
   .MuiInputBase-root.MuiInput-root:before,
   .MuiInputBase-root.MuiInput-root:after,
   .MuiInputBase-root.MuiInput-root:hover:before,
@@ -80,7 +80,7 @@ export const DateField = styled(MUIDateField)`
   }
 `;
 
-export const DatePickerCell = styled(MUIDatePicker)`
+const DatePickerCell = styled(MUIDatePicker)`
   .MuiInputBase-root.MuiInput-root:before,
   .MuiInputBase-root.MuiInput-root:after,
   .MuiInputBase-root.MuiInput-root:hover:before,
@@ -242,7 +242,7 @@ export function FormInputError({ fieldError, className = "" }: FormInputErrorPro
 }
 
 const AUTH_LABELS_CLASSNAMES = "text-moody-blue text-xl mb-3";
-export function FormInput({
+function FormInput({
   name,
   label,
   placeholder = undefined,

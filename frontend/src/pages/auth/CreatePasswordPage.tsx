@@ -6,7 +6,7 @@ import { useTranslation as useT } from "react-i18next";
 import { useSearchParamsTypeSafe } from "src/hooks/useParamsTypeSafe";
 import useUpdatePassword from "src/hooks/useUpdatePassword";
 import { setPasswordSchema, type UpdatePasswordInput, type UpdatePasswordPayload } from "src/schemas/auth";
-import { Button } from "src/stories/button/Button";
+import Button from "src/stories/button/Button";
 import FormInput from "src/stories/form-input/FormInput";
 import Text from "src/stories/text/Text";
 import Title from "src/stories/title/Title";
@@ -17,7 +17,7 @@ const params = z.object({
   key: z.coerce.string(),
 });
 
-export function CreatePasswordPage() {
+function CreatePasswordPage() {
   const { t } = useT();
   const updatePassword = useUpdatePassword();
   const { email: username, key: tempPassword } = useSearchParamsTypeSafe(params, t("This is an invalid link."));

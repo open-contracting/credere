@@ -5,7 +5,7 @@ import { useTranslation as useT } from "react-i18next";
 
 import { getProperty } from "../../util";
 import { type FieldErrorType, Input } from "../form-input/FormInput";
-import { Text } from "../text/Text";
+import Text from "../text/Text";
 
 export type FormSelectOption = {
   label: string;
@@ -26,7 +26,7 @@ const defaultRenderOption = (option: FormSelectOption) => option.label;
 const isStringArray = (obj: unknown): obj is string[] =>
   Array.isArray(obj) && obj.every((item) => typeof item === "string");
 
-export function FormSelect({
+function FormSelect({
   name,
   label,
   className = "",

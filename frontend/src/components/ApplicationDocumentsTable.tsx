@@ -8,14 +8,14 @@ import type { IApplication, IVerifyDocument } from "../schemas/application";
 import ApplicationTableDataDocumentRow from "./ApplicationTableDataDocumentRow";
 import { DataTableHeadCell, DataTableHeadLabel } from "./DataTable";
 
-export interface ApplicationDocumentTableProps {
+interface ApplicationDocumentTableProps {
   application: IApplication;
   readonly?: boolean;
   allowDataVerification?: boolean;
   className?: string;
 }
 
-export function ApplicationDocumentTable({
+function ApplicationDocumentTable({
   application,
   readonly = false,
   allowDataVerification = false,

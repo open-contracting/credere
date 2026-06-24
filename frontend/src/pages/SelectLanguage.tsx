@@ -8,7 +8,7 @@ import { type TypeOf, z } from "zod";
 
 import { AVAILABLE_LANGUAGES, DISPATCH_ACTIONS } from "../constants";
 import useLangContext from "../hooks/useLangContext";
-import { Button } from "../stories/button/Button";
+import Button from "../stories/button/Button";
 import FormSelect, { type FormSelectOption } from "../stories/form-select/FormSelect";
 import Title from "../stories/title/Title";
 

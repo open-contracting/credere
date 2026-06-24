@@ -6,7 +6,7 @@ import Title from "src/stories/title/Title";
 import LenderList from "../../components/LenderList";
 import UserList from "../../components/UserList";
 
-export function Settings() {
+function Settings() {
   const { t } = useT();
 
   return (

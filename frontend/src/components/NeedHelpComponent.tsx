@@ -4,7 +4,7 @@ import { useTranslation as useT } from "react-i18next";
 import FAQContainer from "../stories/faq/FAQContainer";
 import Text from "../stories/text/Text";
 
-export function NeedHelpComponent() {
+function NeedHelpComponent() {
   const { t } = useT();
   return (
     <FAQContainer title={t("Need help? Contact us")}>

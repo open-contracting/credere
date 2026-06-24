@@ -11,12 +11,12 @@ import useRejectApplication from "../../hooks/useRejectApplication";
 import { type FormRejectInput, type RejectApplicationInput, rejectSchema } from "../../schemas/application";
 import FormInput from "../../stories/form-input/FormInput";
 
-export interface RejectApplicationDialogProps {
+interface RejectApplicationDialogProps {
   open: boolean;
   handleClose: () => void;
 }
 
-export function RejectApplicationDialog({ open, handleClose }: RejectApplicationDialogProps) {
+function RejectApplicationDialog({ open, handleClose }: RejectApplicationDialogProps) {
   const { t } = useT();
   const applicationContext = useApplicationContext();
   const application = applicationContext.state.data;

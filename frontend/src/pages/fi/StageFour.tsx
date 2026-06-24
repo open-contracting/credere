@@ -13,7 +13,7 @@ import ApplicationDocumentsTable from "../../components/ApplicationDocumentsTabl
 import useLangContext from "../../hooks/useLangContext";
 import LinkButton from "../../stories/link-button/LinkButton";
 
-export function StageFour() {
+function StageFour() {
   const { t } = useT();
   const navigate = useNavigate();
   const applicationContext = useApplicationContext();

@@ -6,5 +6,3 @@ export const t = (key: string, options?: Record<string, unknown>): string => {
   // the result will always be a string.
   return i18n.t(key, options) as string;
 };
-
-export default t;

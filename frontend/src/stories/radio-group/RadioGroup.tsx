@@ -14,7 +14,7 @@ import { twMerge } from "tailwind-merge";
 import { getProperty } from "../../util";
 import type { FieldErrorType } from "../form-input/FormInput";
 import type { FormSelectOption } from "../form-select/FormSelect";
-import { Text } from "../text/Text";
+import Text from "../text/Text";
 
 export type RadioGroupProps = {
   name: string;
@@ -31,7 +31,7 @@ const defaultRenderOption = (option: FormSelectOption) => option.label;
 const isStringArray = (obj: unknown): obj is string[] =>
   Array.isArray(obj) && obj.every((item) => typeof item === "string");
 
-export function RadioGroup({
+function RadioGroup({
   name,
   label,
   className = "",

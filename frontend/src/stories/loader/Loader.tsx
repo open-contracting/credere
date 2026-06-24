@@ -8,7 +8,7 @@ export function Progress() {
   );
 }
 
-export function Loader() {
+function Loader() {
   return (
     <Container sx={{ height: "95vh" }}>
       <Progress />

@@ -26,7 +26,7 @@ interface DataAvailabilityProps {
   modifiedFields?: { [key: string]: IModifiedDataFields };
 }
 
-export function DataAvailability({
+function DataAvailability({
   available,
   name = undefined,
   label,

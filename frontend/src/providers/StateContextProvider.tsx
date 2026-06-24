@@ -38,7 +38,7 @@ const authReducer = (state: AuthState, action: ActionSetAuth) => {
   }
 };
 
-export function StateContextProvider({ children }: StateContextProviderProps) {
+function StateContextProvider({ children }: StateContextProviderProps) {
   const [state, dispatch] = React.useReducer(authReducer, initialState);
 
   const value = React.useMemo(

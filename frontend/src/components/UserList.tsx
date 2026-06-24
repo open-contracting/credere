@@ -15,7 +15,7 @@ import { DataTable, type HeadCell, type Order } from "./DataTable";
 type ExtendendUser = IUser & IExtendedUser;
 const UserDataTable = DataTable<ExtendendUser>;
 
-export function UserList() {
+function UserList() {
   const { enqueueSnackbar } = useSnackbar();
   const { t } = useT();
 

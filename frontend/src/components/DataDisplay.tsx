@@ -9,7 +9,7 @@ interface DataDisplayProps {
   className?: string;
 }
 
-export function DataDisplay({ data, className = "" }: DataDisplayProps) {
+function DataDisplay({ data, className = "" }: DataDisplayProps) {
   const { t } = useT();
 
   const formatValue = useCallback(

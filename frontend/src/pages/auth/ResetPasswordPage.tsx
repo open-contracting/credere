@@ -5,12 +5,12 @@ import { FormProvider, type SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation as useT } from "react-i18next";
 import useResetPassword from "src/hooks/useResetPassword";
 import { type ResetPasswordInput, resetPasswordSchema } from "src/schemas/auth";
-import { Button } from "src/stories/button/Button";
+import Button from "src/stories/button/Button";
 import FormInput from "src/stories/form-input/FormInput";
 import Text from "src/stories/text/Text";
 import Title from "src/stories/title/Title";
 
-export function ResetPasswordPage() {
+function ResetPasswordPage() {
   const { t } = useT();
   const { resetPasswordMutation, isLoading } = useResetPassword();
 

@@ -3,7 +3,7 @@ import type { EnqueueSnackbar } from "notistack";
 import type { ZodError, ZodType, z } from "zod";
 import { t } from "../util/i18n";
 
-export class ValidationError extends Error {
+class ValidationError extends Error {
   constructor(
     message: string,
     public readonly cause: ZodError,

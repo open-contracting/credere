@@ -22,7 +22,7 @@ export type SubmitInput = TypeOf<typeof submitSchema>;
 
 const UUIDType = z.string().optional();
 
-export const applicationBaseSchema = z.object({
+const applicationBaseSchema = z.object({
   uuid: UUIDType,
 });
 
@@ -41,7 +41,7 @@ export const declineApplicationSchema = z
 
 export type DeclineApplicationInput = TypeOf<typeof declineApplicationSchema>;
 
-export enum DECLINE_FEEDBACK {
+enum DECLINE_FEEDBACK {
   dont_need_access_credit = "dont_need_access_credit",
   already_have_acredit = "already_have_acredit",
   preffer_to_go_to_bank = "preffer_to_go_to_bank",
@@ -74,7 +74,7 @@ export const declineFeedbackSchema = z.object({
 
 export type DeclineFeedbackInput = TypeOf<typeof declineFeedbackSchema>;
 
-export const creditOptionsSchema = z.object({
+const creditOptionsSchema = z.object({
   borrower_size: z.string().min(1, "Borrower size is required"),
   sector: z.string().min(1, "Sector is required"),
   annual_revenue: z.coerce.number().optional().nullable(),
@@ -131,7 +131,7 @@ export interface IAward {
   updated_at: string;
 }
 
-export type PrivateApplicationInput = {
+type PrivateApplicationInput = {
   application_id: number;
 };
 
@@ -226,7 +226,7 @@ export interface IModifiedDataFields {
   user_type: USER_TYPES;
 }
 
-export interface ICalculatorData {
+interface ICalculatorData {
   borrower_size?: string;
   amount_requested?: number;
   repayment_years?: number;

@@ -6,7 +6,7 @@ import FAQComponent from "src/components/FAQComponent";
 import useApplicationContext from "src/hooks/useApplicationContext";
 import useDeclineFeedbackApplication from "src/hooks/useDeclineFeedbackApplication";
 import { type DeclineFeedbackInput, declineFeedbackSchema } from "src/schemas/application";
-import { Button } from "src/stories/button/Button";
+import Button from "src/stories/button/Button";
 import Checkbox from "src/stories/checkbox/Checkbox";
 import FormInput from "src/stories/form-input/FormInput";
 import Text from "src/stories/text/Text";

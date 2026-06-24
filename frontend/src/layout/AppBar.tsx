@@ -7,7 +7,7 @@ import Text from "src/stories/text/Text";
 import OCPLogo from "../assets/ocp-logo.svg";
 import StriveLogo from "../assets/strive-logo.svg";
 import SelectLanguageComponent from "../components/SelectLanguageComponent";
-import { Button } from "../stories/button/Button";
+import Button from "../stories/button/Button";
 
 export interface AppBarProps {
   auth?: boolean;
@@ -57,5 +57,3 @@ export function AppBar({ auth = true, logout }: AppBarProps) {
     </MuiAppBar>
   );
 }
-
-export default AppBar;

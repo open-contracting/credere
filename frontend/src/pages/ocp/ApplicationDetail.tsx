@@ -18,16 +18,16 @@ import { APPLICATION_STATUS, COMPLETED_STATUS, QUERY_KEYS } from "../../constant
 import { useParamsTypeSafe } from "../../hooks/useParamsTypeSafe";
 import type { IApplication } from "../../schemas/application";
 import LinkButton from "../../stories/link-button/LinkButton";
-import { Loader } from "../../stories/loader/Loader";
+import Loader from "../../stories/loader/Loader";
 import { RenderStatusString } from "../../util";
 import ApplicationErrorPage from "../msme/ApplicationErrorPage";
 
-export interface ApplicationDetailProps {
+interface ApplicationDetailProps {
   application: IApplication;
   readonly: boolean;
 }
 
-export function ApplicationDetail({ application, readonly }: ApplicationDetailProps) {
+function ApplicationDetail({ application, readonly }: ApplicationDetailProps) {
   const { t } = useT();
 
   return (
@@ -77,8 +77,6 @@ export function ApplicationDetail({ application, readonly }: ApplicationDetailPr
     </>
   );
 }
-
-export default ApplicationDetail;
 
 export interface LoadApplicationProps {
   readonly?: boolean;

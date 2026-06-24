@@ -13,7 +13,7 @@ import DashboardItemContainer from "../../stories/dashboard/DashboardItemContain
 import Loader from "../../stories/loader/Loader";
 import { formatCurrency } from "../../util";
 
-export function HomeFI() {
+function HomeFI() {
   const { t } = useT();
   const { data, isLoading } = useGetStatisticsFI();
   const { downloadDocument, isDownloading } = useDownloadApplicants();

@@ -34,7 +34,7 @@ interface ApplicationListProps {
   type: USER_TYPES;
 }
 
-export function ApplicationList({ type }: ApplicationListProps) {
+function ApplicationList({ type }: ApplicationListProps) {
   const { enqueueSnackbar } = useSnackbar();
   const { t } = useT();
   const { startApplicationMutation } = useStartApplication();

@@ -22,7 +22,7 @@ import { DatePicker, Input } from "../../stories/form-input/FormInput";
 import Loader from "../../stories/loader/Loader";
 import { formatCurrency, formatDateForFileName } from "../../util";
 
-export function HomeOCP() {
+function HomeOCP() {
   const { t } = useT();
   const constants = useConstants();
   const { data, isLoading } = useGetStatisticsOCPoptIn();

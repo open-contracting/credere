@@ -10,13 +10,13 @@ import ApplicationTableDataAwardRow from "./ApplicationTableDataAwardRow";
 import ApplicationTableDataPreviousAwardRow from "./ApplicationTableDataPreviousAwardRow";
 import { DataTableHeadCell, DataTableHeadLabel } from "./DataTable";
 
-export interface ApplicationAwardTableProps {
+interface ApplicationAwardTableProps {
   application: IApplication;
   readonly?: boolean;
   className?: string;
 }
 
-export function ApplicationAwardTable({ application, readonly = false, className = "" }: ApplicationAwardTableProps) {
+function ApplicationAwardTable({ application, readonly = false, className = "" }: ApplicationAwardTableProps) {
   const { t } = useT();
   const { formatDateFromString } = useLocalizedDateFormatter();
   const { updateAwardMutation, isLoading } = useUpdateAward();

@@ -24,12 +24,12 @@ import type { ICreditProduct } from "../../schemas/application";
 import Loader from "../../stories/loader/Loader";
 import ApplicationErrorPage from "../msme/ApplicationErrorPage";
 
-export interface CreditProductFormProps {
+interface CreditProductFormProps {
   lenderId: number;
   creditProduct?: ICreditProduct | null;
 }
 
-export function CreditProductForm({ creditProduct = null, lenderId }: CreditProductFormProps) {
+function CreditProductForm({ creditProduct = null, lenderId }: CreditProductFormProps) {
   const { t } = useT();
   const constants = useConstants();
   const { createCreditProductMutation, updateCreditProductMutation, isLoading, isError } = useUpsertCreditProduct();

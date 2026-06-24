@@ -9,12 +9,12 @@ import Title from "../stories/title/Title";
 import { formatCurrency } from "../util";
 import { DataTableCell, DataTableHeadCell, DataTableHeadLabel } from "./DataTable";
 
-export interface CreditProductConfirmationProps {
+interface CreditProductConfirmationProps {
   creditProduct: ICreditProduct;
   application: IApplication;
 }
 
-export function CreditProductConfirmation({ creditProduct, application }: CreditProductConfirmationProps) {
+function CreditProductConfirmation({ creditProduct, application }: CreditProductConfirmationProps) {
   const { t } = useT();
   const { formatDateFromString } = useLocalizedDateFormatter();
 

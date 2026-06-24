@@ -37,7 +37,7 @@ const langReducer = (state: LangState, action: ActionSetLang) => {
   }
 };
 
-export function LangContextProvider({ children }: LangContextProviderProps) {
+function LangContextProvider({ children }: LangContextProviderProps) {
   const [state, dispatch] = React.useReducer(langReducer, initialState);
 
   const value = React.useMemo(

@@ -1,4 +1,4 @@
-export const FAQ_QUESTIONS: Record<string, { question: string; answer: string }> = {
+const FAQ_QUESTIONS: Record<string, { question: string; answer: string }> = {
   1: {
     question: "What offers of credit can I find on Credere?",
     answer:

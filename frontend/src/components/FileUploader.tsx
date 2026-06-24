@@ -22,7 +22,7 @@ const fileUploadErrorsMap = {
   [ErrorCode.FileTooLarge]: tNative("File is larger than {maxSizeMB} MB", { maxSizeMB }),
 };
 
-export function FileUploader({ className = "", loading, onAcceptedFile }: FileUploaderProps) {
+function FileUploader({ className = "", loading, onAcceptedFile }: FileUploaderProps) {
   const { t } = useT();
   const { enqueueSnackbar } = useSnackbar();
 

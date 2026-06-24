@@ -21,7 +21,7 @@ interface DataVerificationStatusProps {
   customLabel?: string;
 }
 
-export function DataVerificationStatus({ verified, name, customLabel = undefined }: DataVerificationStatusProps) {
+function DataVerificationStatus({ verified, name, customLabel = undefined }: DataVerificationStatusProps) {
   const { t } = useT();
 
   return (
