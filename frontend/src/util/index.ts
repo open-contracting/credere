@@ -101,22 +101,6 @@ export function getProperty(obj: unknown, propertyString: string): unknown {
   return result;
 }
 
-export const isDateBeforeMonths = (date: string, referenceDate: string, months: number) => {
-  const diffInMonths = dayjs(referenceDate).diff(date, "month");
-
-  return diffInMonths > 0 && diffInMonths <= months;
-};
-
-export const addMonthsToDate = (date: string | undefined, months: number) => {
-  if (!date) {
-    return "";
-  }
-
-  const addedDate = dayjs(date).add(months, "month");
-
-  return addedDate.toDate().toLocaleDateString("en-US", dateFormatOptions);
-};
-
 export const isDateAfterCurrentDate = (date: string) => {
   const currentDate = dayjs();
   return dayjs(date).isAfter(currentDate, "day");
