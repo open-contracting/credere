@@ -1,14 +1,16 @@
 FROM node:20 AS build-stage
 
+RUN corepack enable
+
 WORKDIR /workdir
 
-COPY frontend/package*.json ./
-RUN npm ci --ignore-scripts
+COPY frontend/package.json frontend/pnpm-lock.yaml frontend/pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile --ignore-scripts
 
 COPY . .
 
 WORKDIR /workdir/frontend
-RUN npx tsc && npx vite build
+RUN pnpm exec tsc && pnpm exec vite build
 
 FROM nginxinc/nginx-unprivileged:latest AS production-stage
 USER root

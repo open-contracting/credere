@@ -386,7 +386,6 @@ export function AppRouter() {
             <ApplicationContextProvider>
               <QueryClientProvider client={queryClient}>
                 <RouterProvider router={router} />
-                {/* <ReactQueryDevtools initialIsOpen={false} /> */}
               </QueryClientProvider>
             </ApplicationContextProvider>
           </SecureApplicationContextProvider>

@@ -1,0 +1,4 @@
+minimumReleaseAge: 10080
+allowBuilds:
+  '@swc/core': false # via @vitejs/plugin-react-swc
+  esbuild: false # via vite
