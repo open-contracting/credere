@@ -144,7 +144,7 @@ jmespath==1.1.0
     #   -r requirements.txt
     #   boto3
     #   botocore
-joserfc==1.6.3
+joserfc==1.6.7
     # via moto
 librt==0.8.1
     # via mypy
