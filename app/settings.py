@@ -48,7 +48,7 @@ class Settings(BaseSettings):
     #: The `logging level <https://docs.python.org/3/library/logging.html#levels>`__ of the root logger.
     log_level: int | str = logging.INFO
     #: PostgreSQL connection string.
-    database_url: str = "postgresql:///credere_backend?application_name=credere_backend"
+    database_url: str = "postgresql+psycopg:///credere_backend?application_name=credere_backend"
     #: PostgreSQL connection string that overrides ``DATABASE_URL`` (:ref:`tests<dev-tests>` drops the database).
     test_database_url: str = ""
 

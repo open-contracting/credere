@@ -130,7 +130,7 @@ For example:
    from sqlalchemy.orm import Session
    from sqlmodel import col
    from app import models
-   engine = create_engine("postgresql:///credere", echo=True)
+   engine = create_engine("postgresql+psycopg:///credere", echo=True)
    session = Session(engine)
 
 And then run queries with ``session``.
