@@ -1,4 +1,5 @@
--r requirements.txt
+-r requirements_base.txt
+psycopg[binary]
 botocore
 boto3-stubs
 coverage
