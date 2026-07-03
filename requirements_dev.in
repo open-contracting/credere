@@ -1,11 +1,11 @@
 -r requirements_base.txt
-psycopg[binary]
-botocore
 boto3-stubs
+botocore
 coverage
 moto[cognitoidp]
 mypy
 pandas-stubs
+psycopg[binary]
 py-html-checker
 pytest
 pytest-mock
