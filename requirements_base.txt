@@ -106,6 +106,8 @@ orjson==3.11.8
     # via -r requirements_base.in
 pillow==12.2.0
     # via reportlab
+psycopg==3.3.4
+    # via -r requirements_base.in
 pycparser==3.0
     # via cffi
 pydantic==2.12.5
@@ -186,16 +188,12 @@ typer==0.24.1
 typing-extensions==4.15.0
     # via
     #   alembic
-    #   anyio
     #   fastapi
-    #   mypy-boto3-cognito-idp
-    #   mypy-boto3-ses
     #   pydantic
     #   pydantic-core
     #   pydantic-extra-types
     #   rich-toolkit
     #   sqlalchemy
-    #   starlette
     #   typing-inspection
 typing-inspection==0.4.2
     # via

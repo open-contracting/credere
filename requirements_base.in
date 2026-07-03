@@ -8,6 +8,7 @@ minify-html
 mypy-boto3-cognito-idp
 mypy-boto3-ses
 orjson
+psycopg
 pydantic
 pydantic-settings
 pyjwt[crypto]

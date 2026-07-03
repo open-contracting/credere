@@ -184,7 +184,9 @@ pillow==12.2.0
 pluggy==1.6.0
     # via pytest
 psycopg==3.3.4
-    # via -r requirements_dev.in
+    # via
+    #   -r requirements_base.txt
+    #   -r requirements_dev.in
 psycopg-binary==3.3.4
     # via psycopg
 py-html-checker==0.5.0

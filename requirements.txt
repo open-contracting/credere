@@ -135,7 +135,9 @@ pillow==12.2.0
     #   -r requirements_base.txt
     #   reportlab
 psycopg==3.3.4
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   -r requirements_base.txt
 psycopg-c==3.3.4
     # via psycopg
 pycparser==3.0
@@ -233,17 +235,12 @@ typing-extensions==4.15.0
     # via
     #   -r requirements_base.txt
     #   alembic
-    #   anyio
     #   fastapi
-    #   mypy-boto3-cognito-idp
-    #   mypy-boto3-ses
-    #   psycopg
     #   pydantic
     #   pydantic-core
     #   pydantic-extra-types
     #   rich-toolkit
     #   sqlalchemy
-    #   starlette
     #   typing-inspection
 typing-inspection==0.4.2
     # via
