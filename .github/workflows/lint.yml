@@ -8,9 +8,9 @@ jobs:
     secrets:
       personal-access-token: ${{ secrets.PAT }}
     with:
-      standard-maintenance-scripts-files: requirements_base.in
       # https://fastapi.tiangolo.com/tutorial/request-files/
       # babel and uvicorn are run as commands in a Dockerfile.
       standard-maintenance-scripts-ignore: babel,python-multipart,uvicorn
+      standard-maintenance-scripts-files: requirements_base.in
       # Defer indentation to biome format.
       ocds-noindent: 'yes'
