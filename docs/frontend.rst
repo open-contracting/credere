@@ -17,31 +17,31 @@ Run development server:
 
 .. code:: bash
 
-   npx vite
+   pnpm exec vite
 
 Build production files into ``dist`` directory:
 
 .. code:: bash
 
-   npx tsc && npx vite build
+   pnpm exec tsc && pnpm exec vite build
 
 Run server from the ``dist`` directory:
 
 .. code:: bash
 
-   npx vite preview
+   pnpm exec vite preview
 
 Run a Storybook locally:
 
 .. code:: bash
 
-   npx storybook dev
+   pnpm exec storybook dev
 
 Build static app with a `Storybook’s content <https://storybook.js.org/docs/react/sharing/publish-storybook>`__:
 
 .. code:: bash
 
-   npx storybook build
+   pnpm exec storybook build
 
 Backend integration
 -------------------
