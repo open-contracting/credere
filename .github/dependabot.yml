@@ -6,3 +6,13 @@ updates:
       interval: "daily"
     cooldown:
       default-days: 7
+  - package-ecosystem: "npm"
+    directories:
+      - "/"
+      - "**/*"
+    schedule:
+      interval: "yearly"
+    allow:
+      - dependency-name: "knip"
+    cooldown:
+      default-days: 7
