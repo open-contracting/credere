@@ -5,30 +5,14 @@
     "useIgnoreFile": true,
     "defaultBranch": "main"
   },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on"
-      }
-    }
-  },
-  "linter": {
-    "enabled": true
-  },
   "formatter": {
     "indentStyle": "space",
-    "indentWidth": 2,
     "lineWidth": 119,
     "includes": ["**", "!docs/_static/openapi.json"]
   },
   "css": {
     "parser": {
       "tailwindDirectives": true
-    }
-  },
-  "json": {
-    "formatter": {
-      "indentWidth": 2
     }
   },
   "html": {
