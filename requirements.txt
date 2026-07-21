@@ -49,7 +49,9 @@ click==8.3.1
     #   typer
     #   uvicorn
 cryptography==48.0.1
-    # via -r requirements_base.txt
+    # via
+    #   -r requirements_base.txt
+    #   pyjwt
 dnspython==2.8.0
     # via
     #   -r requirements_base.txt
@@ -57,13 +59,20 @@ dnspython==2.8.0
 email-validator==2.3.0
     # via
     #   -r requirements_base.txt
+    #   fastapi
     #   pydantic
-fastapi==0.135.2
-    # via -r requirements_base.txt
-fastapi-cli==0.0.24
-    # via -r requirements_base.txt
+fastapi[all]==0.135.2
+    # via
+    #   -r requirements_base.txt
+    #   sentry-sdk
+fastapi-cli[standard]==0.0.24
+    # via
+    #   -r requirements_base.txt
+    #   fastapi
 fastapi-cloud-cli==0.15.1
-    # via -r requirements_base.txt
+    # via
+    #   -r requirements_base.txt
+    #   fastapi-cli
 fastar==0.9.0
     # via
     #   -r requirements_base.txt
@@ -88,6 +97,7 @@ httptools==0.7.1
 httpx==0.28.1
     # via
     #   -r requirements_base.txt
+    #   fastapi
     #   fastapi-cloud-cli
 idna==3.15
     # via
@@ -97,9 +107,13 @@ idna==3.15
     #   httpx
     #   requests
 itsdangerous==2.2.0
-    # via -r requirements_base.txt
+    # via
+    #   -r requirements_base.txt
+    #   fastapi
 jinja2==3.1.6
-    # via -r requirements_base.txt
+    # via
+    #   -r requirements_base.txt
+    #   fastapi
 jmespath==1.1.0
     # via
     #   -r requirements_base.txt
@@ -130,11 +144,11 @@ mypy-boto3-ses==1.42.3
     # via -r requirements_base.txt
 orjson==3.11.8
     # via -r requirements_base.txt
-pillow==12.2.0
+pillow==12.3.0
     # via
     #   -r requirements_base.txt
     #   reportlab
-psycopg==3.3.4
+psycopg[c]==3.3.4
     # via
     #   -r requirements.in
     #   -r requirements_base.txt
@@ -144,7 +158,7 @@ pycparser==3.0
     # via
     #   -r requirements_base.txt
     #   cffi
-pydantic==2.12.5
+pydantic[email]==2.12.5
     # via
     #   -r requirements_base.txt
     #   fastapi
@@ -157,14 +171,18 @@ pydantic-core==2.41.5
     #   -r requirements_base.txt
     #   pydantic
 pydantic-extra-types==2.11.1
-    # via -r requirements_base.txt
+    # via
+    #   -r requirements_base.txt
+    #   fastapi
 pydantic-settings==2.14.2
-    # via -r requirements_base.txt
+    # via
+    #   -r requirements_base.txt
+    #   fastapi
 pygments==2.20.0
     # via
     #   -r requirements_base.txt
     #   rich
-pyjwt==2.13.0
+pyjwt[crypto]==2.13.0
     # via -r requirements_base.txt
 python-dateutil==2.9.0.post0
     # via
@@ -176,10 +194,13 @@ python-dotenv==1.2.2
     #   pydantic-settings
     #   uvicorn
 python-multipart==0.0.31
-    # via -r requirements_base.txt
+    # via
+    #   -r requirements_base.txt
+    #   fastapi
 pyyaml==6.0.3
     # via
     #   -r requirements_base.txt
+    #   fastapi
     #   uvicorn
 reportlab==4.4.10
     # via -r requirements_base.txt
@@ -203,7 +224,7 @@ s3transfer==0.16.0
     # via
     #   -r requirements_base.txt
     #   boto3
-sentry-sdk==2.57.0
+sentry-sdk[fastapi]==2.57.0
     # via
     #   -r requirements_base.txt
     #   fastapi-cloud-cli
@@ -235,12 +256,17 @@ typing-extensions==4.15.0
     # via
     #   -r requirements_base.txt
     #   alembic
+    #   anyio
     #   fastapi
+    #   mypy-boto3-cognito-idp
+    #   mypy-boto3-ses
+    #   psycopg
     #   pydantic
     #   pydantic-core
     #   pydantic-extra-types
     #   rich-toolkit
     #   sqlalchemy
+    #   starlette
     #   typing-inspection
 typing-inspection==0.4.2
     # via
@@ -254,9 +280,10 @@ urllib3==2.7.0
     #   botocore
     #   requests
     #   sentry-sdk
-uvicorn==0.42.0
+uvicorn[standard]==0.42.0
     # via
     #   -r requirements_base.txt
+    #   fastapi
     #   fastapi-cli
     #   fastapi-cloud-cli
 uvloop==0.22.1
