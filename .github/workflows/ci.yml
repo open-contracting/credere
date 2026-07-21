@@ -25,7 +25,7 @@ jobs:
           alembic check
           coverage run --source=app -m pytest -W error --random-order --random-order-bucket=global
       - env:
-          TEST_SETTINGS: True
+          TEST_SETTINGS: 1
         run: pytest -W error settings_tests/test_settings.py
       - uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
         with:
