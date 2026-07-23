@@ -8,8 +8,10 @@ from html_checker.validator import ValidatorInterface
 from tests import BASEDIR
 
 allow = {
-    "An “img” element must have an “alt” attribute, except under certain conditions. "
-    "For details, consult guidance on providing text alternatives for images.",
+    (
+        "An “img” element must have an “alt” attribute, except under certain conditions. "
+        "For details, consult guidance on providing text alternatives for images."
+    ),
     # HTML fragment.
     "Start tag seen without seeing a doctype first. Expected “<!DOCTYPE html>”.",
     "Consider adding a “lang” attribute to the “html” start tag to declare the language of this document.",
