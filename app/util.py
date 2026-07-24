@@ -1,12 +1,12 @@
 import base64
 import hashlib
 import hmac
-import os.path
 import uuid
 from collections.abc import Callable, Generator
 from contextlib import contextmanager
 from datetime import datetime
 from enum import Enum, StrEnum
+from pathlib import Path
 from typing import Any, TypeVar
 
 import orjson
@@ -108,9 +108,8 @@ def validate_file(file: UploadFile = File(...)) -> tuple[bytes, str | None]:
     :raise HTTPException: If the file format is not allowed or if the file size is too large.
     """
     filename = file.filename
-    # Value of type variable "AnyOrLiteralStr" of "splitext" cannot be "str | None"
-    # Item "None" of "str | None" has no attribute "lower"
-    if os.path.splitext(filename)[1].lower() not in ALLOWED_EXTENSIONS:  # type: ignore[type-var,union-attr]
+    # Argument 1 to "Path" has incompatible type "str | None"; expected "str | PathLike[str]"
+    if Path(filename).suffix.lower() not in ALLOWED_EXTENSIONS:  # type: ignore[arg-type]
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             detail=_("Format not allowed. It must be a PNG, JPEG, PDF or ZIP file"),

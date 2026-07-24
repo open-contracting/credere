@@ -12,7 +12,6 @@ ignore = [
     "ANN", "C901", "COM812", "CPY001", "D203", "D212", "D415", "EM", "ISC001", "PERF203", "PLR091", "Q000",
     "D1", "D205",
     "DTZ",
-    "PTH",
     "TRY003",  # errors
 ]
 

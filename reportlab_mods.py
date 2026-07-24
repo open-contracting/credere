@@ -1,6 +1,6 @@
 """reportlab/__init__.py runs ``import reportlab_mods`` (this file)."""
 
-import os
+from pathlib import Path
 from typing import Any
 
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
@@ -10,12 +10,12 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Table, TableStyle
 
-fontsdir = os.path.join(os.path.dirname(__file__), "fonts")
+fontsdir = Path(__file__).parent / "fonts"
 
-pdfmetrics.registerFont(TTFont("GTEestiProDisplay", os.path.join(fontsdir, "GTEestiProDisplay-Regular.ttf")))
-pdfmetrics.registerFont(TTFont("GTEestiProDisplayBd", os.path.join(fontsdir, "GTEestiProDisplay-Bold.ttf")))
-pdfmetrics.registerFont(TTFont("GTEestiProDisplayIt", os.path.join(fontsdir, "GTEestiProDisplay-RegularItalic.ttf")))
-pdfmetrics.registerFont(TTFont("GTEestiProDisplayBI", os.path.join(fontsdir, "GTEestiProDisplay-BoldItalic.ttf")))
+pdfmetrics.registerFont(TTFont("GTEestiProDisplay", fontsdir / "GTEestiProDisplay-Regular.ttf"))
+pdfmetrics.registerFont(TTFont("GTEestiProDisplayBd", fontsdir / "GTEestiProDisplay-Bold.ttf"))
+pdfmetrics.registerFont(TTFont("GTEestiProDisplayIt", fontsdir / "GTEestiProDisplay-RegularItalic.ttf"))
+pdfmetrics.registerFont(TTFont("GTEestiProDisplayBI", fontsdir / "GTEestiProDisplay-BoldItalic.ttf"))
 pdfmetrics.registerFontFamily(
     "GTEestiProDisplay",
     normal="GTEestiProDisplay",

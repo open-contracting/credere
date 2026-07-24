@@ -1,4 +1,3 @@
-import os
 from unittest.mock import patch
 
 from fastapi import status
@@ -41,7 +40,7 @@ def test_approve_application_cycle(
     appid = pending_application.id
     source_award = load_json_file("fixtures/award.json")
     new_email = "newtestemail@gmail.com"
-    file = os.path.join(BASEDIR, "fixtures", "file.jpeg")
+    file = BASEDIR / "fixtures" / "file.jpeg"
     award_payload = {"title": "new test title"}
     borrower_payload = {"legal_name": "new_legal_name"}
     approve_payload = {
@@ -151,7 +150,7 @@ def test_approve_application_cycle(
     assert response.json()["application"]["status"] == models.ApplicationStatus.SUBMITTED
 
     # tries to upload document before application starting
-    with open(file, "rb") as file_to_upload:
+    with file.open("rb") as file_to_upload:
         response = client.post(
             "/applications/upload-document",
             data={"uuid": pending_application.uuid, "type": models.BorrowerDocumentType.INCORPORATION_DOCUMENT},
@@ -225,7 +224,7 @@ def test_approve_application_cycle(
     assert response.json()["status"] == models.ApplicationStatus.INFORMATION_REQUESTED
 
     # borrower uploads the wrong type of document
-    with open(os.path.join(BASEDIR, "fixtures", "file.gif"), "rb") as file_to_upload:
+    with (BASEDIR / "fixtures" / "file.gif").open("rb") as file_to_upload:
         response = client.post(
             "/applications/upload-document",
             data={"uuid": pending_application.uuid, "type": models.BorrowerDocumentType.INCORPORATION_DOCUMENT},
@@ -234,7 +233,7 @@ def test_approve_application_cycle(
         assert response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
         assert response.json() == {"detail": _("Format not allowed. It must be a PNG, JPEG, PDF or ZIP file")}
 
-    with open(file, "rb") as file_to_upload:
+    with file.open("rb") as file_to_upload:
         response = client.post(
             "/applications/upload-document",
             data={"uuid": pending_application.uuid, "type": models.BorrowerDocumentType.INCORPORATION_DOCUMENT},

@@ -1,7 +1,7 @@
 import json
-import os
 from collections.abc import Generator
 from contextlib import contextmanager
+from pathlib import Path
 
 from fastapi import status
 from sqlalchemy.orm import Session, sessionmaker
@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session, sessionmaker
 from app import models
 from app.settings import app_settings
 
-BASEDIR = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+BASEDIR = (Path.cwd() / Path(__file__).parent).resolve()
 
 
 class MockResponse:
@@ -26,7 +26,7 @@ class MockResponse:
 
 
 def load_json_file(filename):
-    with open(os.path.join(BASEDIR, filename)) as f:
+    with (BASEDIR / filename).open() as f:
         return json.load(f)
 
 
